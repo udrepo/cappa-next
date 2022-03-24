@@ -12,8 +12,8 @@ export default function NavBar() {
     return <nav className="m-4 md:mx-10 md:my-4 flex justify-between">
         <div><Link href="/"><a className="text-dark-blue text-2xl font-bold">Cappadocia Travel</a></Link></div>
         <div className="flex">
-            <div><Link href="/"><a><FaWhatsapp color="#1A2B49" size="30"/></a></Link></div>
-            <div className="ml-4"><Link href="/"><a><FaQuestionCircle color="#1A2B49" size="30"/></a></Link></div>
+            <div className="hover:text-whatsapp text-dark-blue hover:text-whatsapp hover:border-b-2 border-dark-blue"><Link href="/"><a><FaWhatsapp size="30"/></a></Link></div>
+            <div className="ml-4 hover:text-light-blue hover:border-b-2 border-dark-blue"><Link href="/"><a><FaQuestionCircle size="30"/></a></Link></div>
         </div>
     </nav>
 }
