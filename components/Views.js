@@ -1,5 +1,5 @@
 import useWindowSize from "../hooks/useWindowSize";
-import Image from 'next/image'
+
 import {FaArrowAltCircleLeft, FaArrowAltCircleRight} from "react-icons/fa";
 import {useState} from "react";
 
@@ -53,7 +53,7 @@ export default function Views({slides}){
     return <section className="md:flex justify-between gap-4 md:mx-10">
         <div className="md:w-2/5 md:pr-4 md:hidden">
             <h1 className="my-4 text-3xl font-bold content-center">Views of Cappadocia</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industr's standard dummy text ever since the 1500s</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrs standard dummy text ever since the 1500s</p>
         </div>
 
         <section className='slider'>
@@ -75,7 +75,7 @@ export default function Views({slides}){
 
         <div className="md:w-2/5 md:pl-4 hidden md:block">
             <h1 className="my-4 text-3xl font-bold content-center">Views of Cappadocia</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industr's standard dummy text ever since the 1500s</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrs standard dummy text ever since the 1500s</p>
         </div>
     </section>
 }
