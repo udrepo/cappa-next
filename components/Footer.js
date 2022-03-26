@@ -1,23 +1,25 @@
 import {useRouter} from "next/router";
 import Link from 'next/link'
 import {FaFacebookMessenger, FaHeart, FaInstagram, FaTelegram, FaWhatsapp} from "react-icons/fa";
+import Image from 'next/image'
 
 export default function Footer() {
     const router = useRouter();
-    return <footer className="w-full h-full bg-dark-blue text-white p-4 py-7 flex flex-col gap-4">
-        <a className="text-white text-2xl font-bold">Open Cappadocia</a>
-
-        <div className="flex justify-start gap-4">
+    return <footer className="w-full h-full bg-dark-blue text-white p-4 lg:px-20 py-7 flex flex-col gap-4 lg:flex-row justify-between">
+        <div className="lg:flex flex-col justify-start gap-8">
+            <a className="text-white text-2xl font-bold">Open Cappadocia</a>
+            <div className="flex gap-4">
             <p>Languages:</p>
             <ul className="flex gap-4">
                 {router.locales.map((locale) =>
-                    <li key={locale}>
+                    <li className="text-main-text" key={locale}>
                         <Link href={router.asPath} locale={locale}><a>{locale.toUpperCase()}</a></Link>
                     </li>
                 )}
             </ul>
+            </div>
         </div>
-        <hr/>
+        <hr className="lg:hidden"/>
         <div id="footer-links">
             <ul>
                 <li><a href="#order-form">Book now</a></li>
@@ -32,14 +34,19 @@ export default function Footer() {
                 </li>
             </ul>
         </div>
-        <hr/>
-        <div className="flex flex-col gap-4">
+        <hr className="lg:hidden"/>
+        <div className="flex flex-col gap-4 lg:justify-end">
+            <div className="hidden lg:block place-self-center">
+                <Image src="/assets/cappa_ill.jpg"
+                width="119" height="170"
+                />
+            </div>
             <p className="text-sm flex justify-center gap-2 font-bold">© 2022. Open Cappadocia. Made with love!<FaHeart color="red"/></p>
             <div className="flex justify-center gap-4">
-                <FaWhatsapp size="22" color=""/>
-                <FaInstagram size="22" color=""/>
-                <FaFacebookMessenger size="22" color=""/>
-                <FaTelegram size="22" color=""/>
+                <a href="https://wa.me/77052743248/"><FaWhatsapp size="22" color=""/></a>
+                <a href="https://www.instagram.com/open.cappadocia/"><FaInstagram size="22" color=""/></a>
+                <a href="https://m.me/gurtourtourcontact"><FaFacebookMessenger size="22" color=""/></a>
+                <a href="https://t.me/getyourtour"><FaTelegram size="22" color=""/></a>
             </div>
         </div>
     </footer>

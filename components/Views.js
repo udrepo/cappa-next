@@ -1,31 +1,81 @@
 import useWindowSize from "../hooks/useWindowSize";
 import Image from 'next/image'
+import {FaArrowAltCircleLeft, FaArrowAltCircleRight} from "react-icons/fa";
+import {useState} from "react";
 
-export default function Views(){
+const SliderData = [
+    {
+        image:
+            'https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+    },
+    {
+        image:
+            'https://images.unsplash.com/photo-1501446529957-6226bd447c46?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1489&q=80'
+    },
+    {
+        image:
+            'https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
+    },
+    {
+        image:
+            'https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80'
+    },
+    {
+        image:
+            'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80'
+    }
+];
+
+export default function Views({slides}){
     const size = useWindowSize();
 
     const setHeight = () => {
-        if (size.width < 770) return 207;
-        if (size.width < 1000) return 277;
-        return 397;
+        if (size.width < 770) return size.height * 0.7;
+        if (size.width < 1000) return size.height * 0.7;
+        return size.height * 0.7;
     }
 
-    return <section className="md:flex justify-between">
-        <h1 className="my-4 text-3xl font-bold md:hidden">Views of Cappadocia</h1>
-        <section className="grid grid-cols-10 place-items-center w-full bg-amber-50">
-       <div className="col-span-10">
-           <img src="/assets/banner.jpg" width="300" height="150"/>
-       </div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
-            <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
+    const [current, setCurrent] = useState(0);
+    const length = SliderData.length;
+
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    };
+
+    const prevSlide = () => {
+        setCurrent(current === 0 ? length - 1 : current - 1);
+    };
+
+    if (!Array.isArray(SliderData) || SliderData.length <= 0) {
+        return null;
+    }
+
+    return <section className="md:flex justify-between gap-4 md:mx-10">
+        <div className="md:w-2/5 md:pr-4 md:hidden">
+            <h1 className="my-4 text-3xl font-bold content-center">Views of Cappadocia</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industr's standard dummy text ever since the 1500s</p>
+        </div>
+
+        <section className='slider'>
+            <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} />
+            <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} />
+            {SliderData.map((slide, index) => {
+                return (
+                    <div
+                        className={index === current ? 'slide active' : 'slide'}
+                        key={index}
+                    >
+                        {index === current && (
+                            <img src={slide.image} alt='travel image' className='image' />
+                        )}
+                    </div>
+                );
+            })}
         </section>
-        <h1 className="my-4 text-3xl font-bold hidden md:block">Views of Cappadocia</h1>
+
+        <div className="md:w-2/5 md:pl-4 hidden md:block">
+            <h1 className="my-4 text-3xl font-bold content-center">Views of Cappadocia</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industr's standard dummy text ever since the 1500s</p>
+        </div>
     </section>
 }

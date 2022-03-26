@@ -1,4 +1,3 @@
-
 import Banner from "../components/Banner";
 import TourBlocks from "../components/TourBlocks";
 import Questions from "../components/Questions";
@@ -12,11 +11,11 @@ export default function Home() {
         <>
             <Banner/>
             <section className="m-4">
-            <TourBlocks/>
-            <Questions/>
-                <Views/>
-            <Advantages/>
-            <AdVideo/>
+                <TourBlocks/>
+                <Advantages/>
+                {/*<Views/>*/}
+                <Questions/>
+                <AdVideo/>
             </section>
         </>
     )

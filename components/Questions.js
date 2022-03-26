@@ -2,7 +2,7 @@ import Link from "next/link";
 import {FaFacebookMessenger, FaInstagram, FaQuestionCircle, FaWhatsapp} from "react-icons/fa";
 
 export default function Questions() {
-    return <div className="questions my-4 rounded-md py-4 px-4 ">
+    return <div className="questions my-4 rounded-md py-4 px-4 md:mx-10 ">
         <div className="flex justify-center my-2">
             <div className="hover:text-light-blue text-whatsapp hover:text-whatsapp border-dark-blue">
                 <Link href="/"><a><FaWhatsapp size="50"/></a></Link>
@@ -10,8 +10,8 @@ export default function Questions() {
             <div className="ml-4 hover:text-light-blue text-instagram border-dark-blue">
                 <Link href="/"><a><FaInstagram size="50"/></a></Link>
             </div>
-            <div className="ml-4 hover:text-light-blue text-instagram border-dark-blue hidden md:block">
-                <Link href="/"><a><FaInstagram size="50"/></a></Link>
+            <div className="ml-4 hover:text-light-blue text-messenger border-dark-blue hidden md:block">
+                <Link href="/"><a><FaFacebookMessenger size="50"/></a></Link>
             </div>
         </div>
         <h3>
@@ -33,20 +33,23 @@ export default function Questions() {
           }
 
           @media screen and (min-width: 1000px) {
-            .banner h1 {
-              font-size: 4em;
+            .questions h3 {
+              font-size: 1.8em;
             }
           }
 
           @media screen and (min-width: 1111px) {
-            .banner {
-              height: 50vh;
+            .questions {
+              height: 33vh;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
             }
           }
 
           @media screen and (min-width: 1280px) {
-            .banner {
-              height: 88vh;
+            .questions {
+              height: 33vh;
             }
           }
         `}</style>

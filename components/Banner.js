@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Banner() {
     return <div className="banner">
-        <h1 className="text-white tracking-wide font-extrabold px-4 py-20 md:py-32">
+        <h1 className="text-white tracking-wide font-extrabold px-4 md:pl-20 py-20 md:py-32">
             Open Cappadocia for yourself. Get an unforgettable experience with us!
         </h1>
         <style jsx>{`
@@ -17,12 +17,12 @@ export default function Banner() {
             font-family: 'Poppins', sans-serif;
             font-weight: 900;
             font-size: 1.6em;
-            // background-color: rgba(26, 43, 73, 0.5)
           }
 
           @media screen and (min-width: 1000px) {
             .banner h1 {
-              font-size: 4em;
+              font-size: 3.3em;
+              width: 80%;
             }
           }
 
