@@ -9,7 +9,7 @@ export default function AdVideo(){
         return 397;
     }
 
-return <section className="m-4 md:flex justify-between">
+return <section className="md:flex justify-between">
     <h1 className="my-4 text-3xl font-bold">Experience video</h1>
   <section className="md:w-3/5">
       <iframe width="100%" height={setHeight()} src="https://www.youtube.com/embed/NLmYGHYtGko?controls=0"
