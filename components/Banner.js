@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Banner() {
     return <div className="banner">
-        <h1 className="text-white tracking-wide font-extrabold px-4 py-24 md:py-32">
+        <h1 className="text-white tracking-wide font-extrabold px-4 py-20 md:py-32">
             Open Cappadocia for yourself. Get an unforgettable experience with us!
         </h1>
         <style jsx>{`

@@ -2,6 +2,7 @@
 import Banner from "../components/Banner";
 import TourBlocks from "../components/TourBlocks";
 import Questions from "../components/Questions";
+import AdVideo from "../components/AdVideo";
 
 export default function Home() {
 
@@ -10,6 +11,7 @@ export default function Home() {
             <Banner/>
             <TourBlocks/>
             <Questions/>
+            <AdVideo/>
         </>
     )
 }

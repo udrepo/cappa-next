@@ -3,6 +3,7 @@ import Image from "next/image";
 import {useEffect, useState} from "react";
 import {FaBolt} from "react-icons/fa";
 import {AiFillStar, AiOutlineFieldTime} from "react-icons/ai";
+import useWindowSize from "../hooks/useWindowSize";
 
 export default function TourBlock() {
     const size = useWindowSize();
@@ -38,7 +39,7 @@ export default function TourBlock() {
                         <AiFillStar/>
                         <AiFillStar/>
                     </div>
-                    <p>4.9(257)</p>
+                    <p className="pl-1">4.9(257)</p>
                 </div>
                 <div className="flex justify-start items-end gap-1">
                     <p className="font-bold text-xl">From $130</p>
@@ -47,38 +48,4 @@ export default function TourBlock() {
             </div>
         </div>
     </a></Link>
-}
-
-
-function useWindowSize() {
-    // Initialize state with undefined width/height so server and client renders match
-    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-    const [windowSize, setWindowSize] = useState({
-        width: 100,
-        height: 100,
-    });
-
-    useEffect(() => {
-        // only execute all the code below in client side
-        if (typeof window !== 'undefined') {
-            // Handler to call on window resize
-            function handleResize() {
-                // Set window width/height to state
-                setWindowSize({
-                    width: window.innerWidth,
-                    height: window.innerHeight,
-                });
-            }
-
-            // Add event listener
-            window.addEventListener("resize", handleResize);
-
-            // Call handler right away so state gets updated with initial window size
-            handleResize();
-
-            // Remove event listener on cleanup
-            return () => window.removeEventListener("resize", handleResize);
-        }
-    }, []); // Empty array ensures that effect is only run on mount
-    return windowSize;
 }
