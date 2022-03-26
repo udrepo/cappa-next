@@ -2,21 +2,41 @@ import Image from 'next/image'
 
 export default function Banner() {
     return <div className="banner">
-        <h1 className="text-sky-800 font-extrabold px-4 py-24 md:py-32">Open Cappadocia for yourself</h1>
+        <h1 className="text-white tracking-wide font-extrabold px-4 py-24 md:py-32">
+            Open Cappadocia for yourself. Get an unforgettable experience with us!
+        </h1>
         <style jsx>{`
+
           .banner {
             height: 35vh;
-            background: url("/assets/banner.jpg") center no-repeat;
+            background: url("https://sheriftravel.ru/uploads/slider/616ee86ae8c13-1634658410.jpg") center no-repeat;
             background-size: cover;
           }
-          .banner h1{
-          font-size: 1.8em;
-         // background-color: rgba(26, 43, 73, 0.5)
+
+          .banner h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            font-size: 1.6em;
+            // background-color: rgba(26, 43, 73, 0.5)
           }
-          
-          @media screen and (min-width: 1000px) {  .banner h1{font-size: 4em;}  }
-          @media screen and (min-width: 1111px) {  .banner{height: 50vh;}  }
-          @media screen and (min-width: 1280px) {.banner{height: 88vh;}}
+
+          @media screen and (min-width: 1000px) {
+            .banner h1 {
+              font-size: 4em;
+            }
+          }
+
+          @media screen and (min-width: 1111px) {
+            .banner {
+              height: 50vh;
+            }
+          }
+
+          @media screen and (min-width: 1280px) {
+            .banner {
+              height: 88vh;
+            }
+          }
         `}</style>
     </div>
 }

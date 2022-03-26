@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -18,3 +19,20 @@ a {
 * {
   box-sizing: border-box;
 }
+
+#footer-links {
+  color: white;
+}
+
+#footer-links a{
+  text-decoration: none;
+}
+
+#footer-links ul {
+  list-style-type: none;
+}
+
+#footer-links li {
+  padding: 0.2em;
+}
+
