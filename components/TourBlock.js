@@ -16,7 +16,7 @@ export default function TourBlock() {
         return size.height * 0.7;
     }
 
-    return <Link href="/"><a>
+    return <Link href="/"><a className="hover:shadow-2xl shadow-dark-blue">
         <div className="w-fit grid grid-cols-1 items-center border border-gray-400 rounded-md text-dark-blue">
             <Image src="/assets/banner.jpg" width={size.width } height={setHeight()}
                    objectFit="cover" className="rounded-t-md"/>

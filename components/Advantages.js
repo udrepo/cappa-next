@@ -1,7 +1,7 @@
 import {FcCalendar, FcGlobe, FcSearch} from "react-icons/fc";
 
 export default function Advantages(){
-   return <section>
+   return <section className="lg:flex justify-around md:my-9">
        <div className="grid grid-cols-4 place-items-center my-4">
            <FcCalendar size="64"/>
            <div className="col-span-3 place-self-start self-center">
