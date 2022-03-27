@@ -9,6 +9,7 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
+  @apply text-dark-blue;
 }
 
 a {
@@ -34,52 +35,4 @@ a {
 
 #footer-links li {
   padding: 0.2em;
-}
-
-.slider {
-  @apply text-dark-blue;
-  position: relative;
-  height: fit-content;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2em 1em;
-}
-
-.image {
-  width: 95%;
-  height: available;
-  border-radius: 10px;
-}
-
-.right-arrow {
-  position: absolute;
-  top: 50%;
-  right: 0.1em;
-  font-size: 3rem;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
-}
-
-.left-arrow {
-  position: absolute;
-  top: 50%;
-  left: 0.1em;
-  font-size: 3rem;
-  z-index: 10;
-  cursor: pointer;
-  user-select: none;
-}
-
-.slide {
-  opacity: 0;
-  transition-duration: 1s ;
-}
-
-.slide.active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08);
 }
