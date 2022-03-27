@@ -8,15 +8,13 @@ import useWindowSize from "../hooks/useWindowSize";
 export default function TourBlock() {
     const size = useWindowSize();
 
-    console.log(size.height)
-
     const setHeight = () => {
         if (size.width < 770) return size.height * 0.1;
         if (size.width < 1000) return size.height * 0.3;
         return size.height * 0.7;
     }
 
-    return <Link href="/"><a className="hover:shadow-2xl shadow-dark-blue">
+    return <Link href="/tour"><a className="hover:shadow-2xl shadow-dark-blue">
         <div className="w-fit grid grid-cols-1 items-center border border-gray-400 rounded-md text-dark-blue">
             <Image src="/assets/banner.jpg" width={size.width } height={setHeight()}
                    objectFit="cover" className="rounded-t-md"/>

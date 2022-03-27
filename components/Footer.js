@@ -2,14 +2,17 @@ import {useRouter} from "next/router";
 import Link from 'next/link'
 import {FaFacebookMessenger, FaHeart, FaInstagram, FaTelegram, FaWhatsapp} from "react-icons/fa";
 import Image from 'next/image'
+import useTranslation from "next-translate/useTranslation";
+
 
 export default function Footer() {
     const router = useRouter();
+    let {t} = useTranslation();
     return <footer className="w-full h-full bg-dark-blue text-white p-4 lg:px-20 py-7 flex flex-col gap-4 lg:flex-row justify-between">
         <div className="lg:flex flex-col justify-start gap-8">
-            <a className="text-white text-2xl font-bold">Open Cappadocia</a>
-            <div className="flex gap-4">
-            <p>Languages:</p>
+            <Image src="/assets/logo.png" width={220} height={63} />
+            <div className="flex gap-4 mt-2">
+            <p>{t('common:languages')}</p>
             <ul className="flex gap-4">
                 {router.locales.map((locale) =>
                     <li className="text-main-text" key={locale}>
@@ -22,12 +25,12 @@ export default function Footer() {
         <hr className="lg:hidden"/>
         <div id="footer-links">
             <ul>
-                <li><a href="#order-form">Book now</a></li>
-                <li><a href="https://wa.me/77052743248/">Help</a></li>
-                <li><a href="">Privacy policy</a></li>
-                <li className="mb-2"><a href="">Offer Agreement</a></li>
+                <li><a href="#order-form">{t('common:bookNow')}</a></li>
+                <li><a href="https://wa.me/77052743248/">{t('common:help')}</a></li>
+                <li><a href="">{t('common:privacy')}</a></li>
+                <li className="mb-2"><a href="">{t('common:agreement')}</a></li>
                 <hr/>
-                <li className="mt-2">Contacts
+                <li className="mt-2">{t('common:contacts')}
                     <br/>+7 705 274 3248 (WhatsApp)
                     <br/>+7 778 183 0799
                     <br/>Email: bookballontour@gmail.com

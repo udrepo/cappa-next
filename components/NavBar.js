@@ -1,13 +1,10 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import useTranslation from "next-translate/useTranslation";
 
 import {FaQuestionCircle, FaWhatsapp} from "react-icons/fa";
 import useWindowSize from "../hooks/useWindowSize";
 
 export default function NavBar() {
-
-    let {t} = useTranslation();
 
     const size = useWindowSize();
 
@@ -22,7 +19,6 @@ export default function NavBar() {
         return 220;
     }
 
-    console.log(t('common:nav'));
     return <nav className="m-4 my-0 md:mx-20 md:my-4 flex justify-between">
         <div className="self-end"><Link href="/"><a className="">
             <Image src="/assets/logo.png" width={setWidth()} height={setHeight()}/>
