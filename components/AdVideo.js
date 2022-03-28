@@ -9,7 +9,7 @@ export default function AdVideo({title, videoId, desc}){
         return 400;
     }
 
-return <section className="md:flex justify-between lg:my-5">
+return <section className="md:flex justify-between lg:my-10">
     <div className="md:w-2/6 md:pr-4">
     <h1 className="text-xl md:text-3xl font-bold content-center text-center lg:text-left">{title}</h1>
         <p className="pb-5 font-bold">{desc}</p>
