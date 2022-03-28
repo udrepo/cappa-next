@@ -11,7 +11,7 @@ export default function AdVideo({videoId, desc}){
 
 return <section className="md:flex justify-between md:mx-10">
     <div className="md:w-2/5 md:pr-4">
-    <h1 className="my-4 text-3xl font-bold content-center">Experience video</h1>
+    <h1 className="text-xl md:text-3xl font-bold content-center">Experience video</h1>
         <p className="pb-5 font-bold">{desc}</p>
     </div>
   <section className="md:w-3/5">

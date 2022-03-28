@@ -1,9 +1,11 @@
 import Views from "../../components/Views";
 import {AiFillStar} from "react-icons/ai";
-import {FaBus, FaHistory, FaPumpSoap} from "react-icons/fa";
+import {FaBus, FaCheck, FaHistory, FaPumpSoap} from "react-icons/fa";
 import TourBlocks from "../../components/TourBlocks";
 import AdVideo from "../../components/AdVideo";
 import BookNowButton from "../../components/BookNowButton";
+import IncludedLi from "../../components/IncludedLi";
+import Reviews from "../../components/Reviews";
 
 export default function TourPage(){
     return <main className="mb-10 lg:mx-20">
@@ -53,12 +55,48 @@ export default function TourPage(){
                     </div>
                 </li>
             </ul>
-            <div>
-                <p>Experience</p>
-
+            <div className="flex flex-col items-center gap-4 my-4">
+                <p className="font-extrabold text-2xl">Experience</p>
+                <div className="self-start flex flex-col gap-2">
+                    <div>
+                        <p className="font-extrabold text-main-text">Highlights</p>
+                        <ul className="list-disc mx-4 my-2 lg:mx-20 font-bold">
+                            <li>Early morning pickup from hotel</li>
+                            <li>Watch the sunrise over the fairy chimney rock formations of Cappadocia from above</li>
+                            <li>Amazing view of valley</li>
+                            <li>Leave with lasting memories and a souvenir flight certificate</li>
+                        </ul>
+                    </div>
+                    <hr/>
+                    <div>
+                        <p className="font-extrabold text-main-text mb-2">Description</p>
+                        <p className="font-bold">Enjoy Cappadocia from above on a thrilling hot air balloon tour complete with a light breakfast and champagne celebration upon landing.
+                            <br/>  <br/>
+                            Start your tour with a luxury mini-bus transfer from your hotel to the local partners headquarters. Here you can relax and enjoy a light breakfast while the pilots choose a launch site.
+                            <br/>  <br/>
+                            Then get ready to watch the crew assemble and inflate the balloon. It is the only balloon variety in the region that is silver-coated, a hallmark of quality and safety. Following a brief introduction, you will be off to see Cappadocia from high in the air.
+                            <br/>  <br/>
+                            Climb approximately 300 meters and take in panoramic views as you drift above the valleys and between rock formations. Balloons move by the wind and you will float wherever the breeze takes you.
+                            <br/>  <br/>
+                            Once back on the ground, celebrate your flight with a champagne toast and receive a commemorative flight medallion.</p>
+                    </div>
+                    <hr/>
+                    <div>
+                        <p className="font-extrabold text-main-text">Included</p>
+                        <ul className="font-bold">
+                           <IncludedLi text="Hotel pick-up and drop off"/>
+                            <IncludedLi text="Insurance"/>
+                            <IncludedLi text="All Fees and Taxes"/>
+                            <IncludedLi text="Flight certificate"/>
+                            <IncludedLi text="Glass of champagne on landing"/>
+                            <IncludedLi text="1-hour balloon flight"/>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <AdVideo videoId="AyHGlH4Nw4g"/>
             <TourBlocks title={'Other tours in Cappadocia'}/>
+            <Reviews/>
         </div>
         <BookNowButton/>
     </main>
