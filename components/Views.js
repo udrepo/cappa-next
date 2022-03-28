@@ -2,7 +2,7 @@ import Slider from '@madzadev/image-slider'
 import "@madzadev/image-slider/dist/index.css";
 import useWindowSize from "../hooks/useWindowSize";
 
-export default function Views(){
+export default function Views({showDotControls}){
     const size = useWindowSize();
 
     const setHeight = () => {
@@ -12,7 +12,31 @@ export default function Views(){
     const images = [
         {url: '/assets/banner.jpg'},
         {url: '/assets/404.jpg'},
+        {url: '/assets/social.jpg'},
+        {url: '/assets/banner.jpg'},
+        {url: '/assets/404.jpg'},
+        {url: '/assets/social.jpg'},
+        {url: '/assets/banner.jpg'},
+        {url: '/assets/404.jpg'},
+        {url: '/assets/social.jpg'},
+        {url: '/assets/banner.jpg'},
+        {url: '/assets/404.jpg'},
+        {url: '/assets/social.jpg'},
+        {url: '/assets/banner.jpg'},
+        {url: '/assets/404.jpg'},
+        {url: '/assets/social.jpg'},
+        {url: '/assets/banner.jpg'},
+        {url: '/assets/404.jpg'},
+        {url: '/assets/social.jpg'},
+        {url: '/assets/banner.jpg'},
+        {url: '/assets/404.jpg'},
+        {url: '/assets/social.jpg'},
+        {url: '/assets/banner.jpg'},
+        {url: '/assets/404.jpg'},
+        {url: '/assets/social.jpg'},
+        {url: '/assets/banner.jpg'},
+        {url: '/assets/404.jpg'},
         {url: '/assets/social.jpg'}
     ]
-  return <Slider   autoPlayInterval={7000} imageList={images} width="100%" height={setHeight()}/>
+  return <Slider showDotControls={showDotControls?true:false} autoPlayInterval={7000} imageList={images} width="100%" height={setHeight()}/>
 }

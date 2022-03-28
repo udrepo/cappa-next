@@ -1,6 +1,6 @@
 import useWindowSize from "../hooks/useWindowSize";
 
-export default function AdVideo({videoId, desc}){
+export default function AdVideo({title, videoId, desc}){
     const size = useWindowSize();
 
     const setHeight = () => {
@@ -9,9 +9,9 @@ export default function AdVideo({videoId, desc}){
         return 400;
     }
 
-return <section className="md:flex justify-between lg:mx-20 lg:my-10">
+return <section className="md:flex justify-between lg:mx-20 lg:my-5">
     <div className="md:w-2/6 md:pr-4">
-    <h1 className="text-xl md:text-3xl font-bold content-center">Experience video</h1>
+    <h1 className="text-xl md:text-3xl font-bold content-center text-center lg:text-left">{title}</h1>
         <p className="pb-5 font-bold">{desc}</p>
     </div>
   <section className="md:w-4/6">
