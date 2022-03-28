@@ -11,7 +11,7 @@ export default function Home() {
     return (
         <>
             <Banner title={t('common:bannerText')}/>
-            <section className="m-4 md:my-20 flex flex-col gap-8">
+            <section className="m-4 md:my-20 flex flex-col gap-8 lg:mx-20">
                 <TourBlocks title={t('common:tourBlocksTitle')}/>
                 <Advantages
                     bookTitle={t('common:bookTitle')} bookText={t('common:bookText')}

@@ -1,0 +1,16 @@
+{
+  "aboutActivity" : "Тур жайлы",
+  "experience" : "Experience",
+  "highlights" : "Маңызды ақпараттар",
+  "desc" : "Толығырақ",
+  "included" : "Тур құнына кіреді",
+  "pp" : "бір адамға",
+  "bookInWA" : "WhatsApp-та тапсырыс бер",
+  "bookInIG" : "Instagram-да тапсырыс бер",
+  "bookText" : "Турды WhatsApp не Instagram арқылы тапсырыс бер",
+  "payWith" : "Төлеу тәсілдері: ",
+  "otherTours" : "Каппадокиядағы басқа турлар",
+  "reviewText" : "Саяхатшылардың бізге берген бағасы",
+  "basedOn" : "Бағалар санЫ: {{reviewsAmount}}",
+  "videoTitle" : "Тур видеосы"
+}

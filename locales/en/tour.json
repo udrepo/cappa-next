@@ -1,0 +1,16 @@
+{
+  "aboutActivity" : "About this activity",
+  "experience" : "Experience",
+  "highlights" : "Highlights",
+  "desc" : "Description",
+  "included" : "Included",
+  "pp" : "per person",
+  "bookInWA" : "Book in WhatsApp",
+  "bookInIG" : "Book in Instagram",
+  "bookText" : "Book this tour now in WhatsApp or Instagram",
+  "payWith" : "Pay with: ",
+  "otherTours" : "Other tours in Cappadocia",
+  "reviewText" : "Customer reviews",
+  "basedOn" : "Based on {{reviewsAmount}} reviews",
+  "videoTitle" : "Video about the tour"
+}
