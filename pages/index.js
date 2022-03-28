@@ -4,18 +4,23 @@ import Questions from "../components/Questions";
 import AdVideo from "../components/AdVideo";
 import Advantages from "../components/Advantages";
 import Views from "../components/Views";
+import useTranslation from "next-translate/useTranslation";
 
 export default function Home() {
-
+    let {t} = useTranslation();
     return (
         <>
-            <Banner/>
-            <section className="m-4">
-                <TourBlocks/>
+            <Banner title={t('common:bannerText')}/>
+            <section className="m-4 my-8 flex flex-col gap-8">
+                <TourBlocks title={'Experiences in Cappadocia'}/>
                 <Advantages/>
                 {/*<Views/>*/}
                 <Questions/>
-                <AdVideo/>
+                <AdVideo videoId="NLmYGHYtGko"
+                desc="The short video shown all great Cappadocia must-see travel destinations.
+            Discover our authentic,
+            unforgettable experiences and explore for real."
+                />
             </section>
         </>
     )

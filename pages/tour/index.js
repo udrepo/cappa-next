@@ -2,6 +2,8 @@ import Views from "../../components/Views";
 import {AiFillStar} from "react-icons/ai";
 import {FaBus, FaHistory, FaPumpSoap} from "react-icons/fa";
 import TourBlocks from "../../components/TourBlocks";
+import AdVideo from "../../components/AdVideo";
+import BookNowButton from "../../components/BookNowButton";
 
 export default function TourPage(){
     return <main className="mb-10 lg:mx-20">
@@ -51,7 +53,13 @@ export default function TourPage(){
                     </div>
                 </li>
             </ul>
-            <TourBlocks/>
+            <div>
+                <p>Experience</p>
+
+            </div>
+            <AdVideo videoId="AyHGlH4Nw4g"/>
+            <TourBlocks title={'Other tours in Cappadocia'}/>
         </div>
+        <BookNowButton/>
     </main>
 }

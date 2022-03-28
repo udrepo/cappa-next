@@ -8,7 +8,6 @@ export default function NavBar() {
 
     const size = useWindowSize();
 
-
     const setHeight = () => {
         if (size.width < 1000) return 52;
         return 63;
@@ -19,7 +18,7 @@ export default function NavBar() {
         return 220;
     }
 
-    return <nav className="m-4 my-0 md:mx-20 md:my-4 flex justify-between">
+    return <nav className="m-4 my-0 md:mx-20 md:my-1 flex justify-between">
         <div className="self-end"><Link href="/"><a className="">
             <Image src="/assets/logo.png" width={setWidth()} height={setHeight()}/>
         </a></Link></div>

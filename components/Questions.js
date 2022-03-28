@@ -2,7 +2,7 @@ import Link from "next/link";
 import {FaFacebookMessenger, FaInstagram, FaQuestionCircle, FaWhatsapp} from "react-icons/fa";
 
 export default function Questions() {
-    return <div className="questions my-4 rounded-md py-4 px-4 md:mx-10 ">
+    return <div className="questions rounded-md py-4 px-4 md:mx-10 ">
         <div className="flex justify-center my-2">
             <div className="hover:text-light-blue text-whatsapp hover:text-whatsapp border-dark-blue">
                 <Link href="/"><a><FaWhatsapp size="50"/></a></Link>

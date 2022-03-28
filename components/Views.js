@@ -7,5 +7,5 @@ export default function Views(){
         {url: '/assets/404.jpg'},
         {url: '/assets/social.jpg'}
     ]
-  return <Slider imageList={images} width="100%" height={250}/>
+  return <Slider   autoPlayInterval={7000} imageList={images} width="100%" height={250}/>
 }

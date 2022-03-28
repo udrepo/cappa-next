@@ -1,9 +1,9 @@
 import Image from 'next/image'
 
-export default function Banner() {
+export default function Banner({title}) {
     return <div className="banner">
         <h1 className="text-white tracking-wide font-extrabold px-4 md:pl-20 py-20 md:py-32">
-            Open Cappadocia for yourself. Get an unforgettable experience with us!
+            {title}
         </h1>
         <style jsx>{`
 
@@ -34,7 +34,7 @@ export default function Banner() {
 
           @media screen and (min-width: 1280px) {
             .banner {
-              height: 88vh;
+              height: 82vh;
             }
           }
         `}</style>
