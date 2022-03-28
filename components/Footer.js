@@ -8,7 +8,7 @@ import useTranslation from "next-translate/useTranslation";
 export default function Footer() {
     const router = useRouter();
     let {t} = useTranslation();
-    return <footer className="w-full h-full bg-dark-blue text-white p-4 lg:px-20 py-7 flex flex-col gap-4 lg:flex-row justify-between">
+    return <footer className="w-full h-full bg-dark-blue text-white p-4 py-7 md:px-20 flex flex-col gap-4 lg:flex-row justify-between">
         <div className="lg:flex flex-col justify-start gap-8">
             <Image src="/assets/logo.png" width={220} height={63} />
             <div className="flex gap-4 mt-2">

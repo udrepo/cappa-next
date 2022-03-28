@@ -6,15 +6,15 @@ export default function AdVideo({videoId, desc}){
     const setHeight = () => {
         if (size.width < 770) return 207;
         if (size.width < 1000) return 277;
-        return 397;
+        return 400;
     }
 
-return <section className="md:flex justify-between md:mx-10">
-    <div className="md:w-2/5 md:pr-4">
+return <section className="md:flex justify-between lg:mx-20 lg:my-10">
+    <div className="md:w-2/6 md:pr-4">
     <h1 className="text-xl md:text-3xl font-bold content-center">Experience video</h1>
         <p className="pb-5 font-bold">{desc}</p>
     </div>
-  <section className="md:w-3/5">
+  <section className="md:w-4/6">
       <iframe width="100%" height={setHeight()} src={`https://www.youtube.com/embed/${videoId}?controls=0`}
               title="YouTube video player" frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

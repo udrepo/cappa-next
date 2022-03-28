@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import {useEffect, useState} from "react";
 import {FaBolt} from "react-icons/fa";
 import {AiFillStar, AiOutlineFieldTime} from "react-icons/ai";
 import useWindowSize from "../hooks/useWindowSize";
@@ -20,7 +19,6 @@ export default function TourBlock() {
                    objectFit="cover" className="rounded-t-md"/>
             <div className="px-2 my-2">
                 <p className="font-bold">Cappadocia: Hot-Air Balloon Tour</p>
-
                 <ul className="text-sm">
                     <li className="my-1 flex items-center gap-1"><FaBolt/>Available for booking</li>
                     <li className="my-1 flex items-center gap-1"><AiOutlineFieldTime/>Duration</li>

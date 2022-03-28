@@ -3,7 +3,6 @@ import TourBlocks from "../components/TourBlocks";
 import Questions from "../components/Questions";
 import AdVideo from "../components/AdVideo";
 import Advantages from "../components/Advantages";
-import Views from "../components/Views";
 import useTranslation from "next-translate/useTranslation";
 
 export default function Home() {
@@ -11,7 +10,7 @@ export default function Home() {
     return (
         <>
             <Banner title={t('common:bannerText')}/>
-            <section className="m-4 my-8 flex flex-col gap-8">
+            <section className="m-4 md:my-20 flex flex-col gap-8">
                 <TourBlocks title={'Experiences in Cappadocia'}/>
                 <Advantages/>
                 {/*<Views/>*/}
