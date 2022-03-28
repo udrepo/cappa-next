@@ -16,7 +16,7 @@ export default function Reviews() {
             <p>Based on 212 reviews</p>
         </div>
         <div className="lg:col-span-3 divide-y-2 divide-dark-blue">
-           <ReviewBlock name="Alexsander"
+           <ReviewBlock name="Alexander"
                         date="6 Jan,2022"
                         text={"Excellent organization, " +
                             "picked up at the hotel exactly at the time they said."}/>
