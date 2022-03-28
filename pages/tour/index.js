@@ -19,7 +19,7 @@ export default function TourPage(){
                   <BookBlock/>
                </div>
                <div className="lg:order-1 ">
-                   <h1 className="text-dark-blue text-2xl font-extrabold lg:text-4xl lg:mt-6">
+                   <h1 className="text-dark-blue text-2xl font-extrabold lg:text-4xl mt-4 lg:mt-6">
                        <div className="hidden lg:block lg:flex items-center gap-1 my-3 text-sm">
                            <p className="bg-main-text w-fit p-1 rounded-md text-white font-bold">Most popular</p>
                            <p className="bg-yellow-300 w-fit p-1 rounded-md text-white font-bold">High Rated</p>
@@ -44,7 +44,7 @@ export default function TourPage(){
                    </div>
                </div>
            </div>
-            <article className="my-3 font-bold w-2/3">
+            <article className="my-3 font-bold lg:w-2/3">
                 Get stunning views of the rock formations known as fairy chimneys on a hot air balloon flight over Cappadocia. Look down on the impressive valleys and plains at sunrise, and marvel at the clusters of cone-shaped rocks below you.
             </article>
             <p className="my-8 self-center text-2xl font-extrabold md:w-2/3 md:self-start">About this activity</p>
