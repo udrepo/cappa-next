@@ -18,7 +18,7 @@ export default function TourBlock({tours, pp}) {
             <Image src={tours.images[1].url} width={size.width } height={setHeight()}
                    objectFit="cover" className="rounded-t-md"/>
             <div className="px-2 my-2">
-                <p className="font-bold">{tours.title}</p>
+                <p className="font-bold f-rus">{tours.title}</p>
                 <ul className="text-sm">
                     <li className="my-1 flex items-center gap-1"><FaBolt/>{tours.availability}</li>
                     <li className="my-1 flex items-center gap-1">

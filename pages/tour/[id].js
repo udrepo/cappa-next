@@ -10,19 +10,23 @@ import BookBlock from "../../components/BookBlock";
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import {useRouter} from "next/router";
-import {tours, ids} from "../../data/tours";
+import {tours} from "../../data/tours";
 
-// export const getStaticPaths = async ()=>{
-//     const paths = tours.kk.tours.map(val=>{
-//         return {
-//             params: {id: val.id.toString()}
-//         }
-//     });
-//
-//     return {
-//         paths, fallback: false
-//     }
-// }
+export const getStaticPaths = async ({locales}) => {
+    let paths = locales.map(locale => {
+        return tours.kk.tours.map(val => {
+            return {
+                params: {id: val.id.toString(),
+                },
+                locale
+            }
+        })
+    }).flat();
+    return {
+        paths,
+        fallback: false
+    }
+}
 
 
 export default function TourPage() {
@@ -32,7 +36,7 @@ export default function TourPage() {
 
     const lg = router.locale.toString();
 
-    const obj = {...tours[lg].tours.find(e=>e.id===id)}
+    const obj = {...tours[lg].tours.find(e => e.id === id)}
     return <main className="mb-10 md:mx-20">
 
         <hr className="hidden lg:block -mx-20"/>
@@ -100,7 +104,8 @@ export default function TourPage() {
                         <p className="font-extrabold text-main-text">{t('tour:highlights')}</p>
                         <ul className="list-disc mx-8 my-2 font-bold">
                             {obj.highlights.map(value => {
-                                return <li key={value}>{value}</li>}
+                                    return <li key={value}>{value}</li>
+                                }
                             )}
                         </ul>
                     </div>

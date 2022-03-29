@@ -36,3 +36,10 @@ a {
 #footer-links li {
   padding: 0.2em;
 }
+
+.f-rus{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
