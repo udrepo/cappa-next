@@ -5,7 +5,7 @@ import useTranslation from "next-translate/useTranslation";
 export default function BookBlock({price, title}) {
     let {t} = useTranslation();
     return <div className="hidden lg:block absolute top-0 right-0 px-4 py-10
-    w-80 border-solid border-2 border-t-main-text">
+    w-80 border-solid border-2 border-t-main-text" id="book">
         <div className="flex justify-around items-center">
             <div className="flex flex-col text-main-text justify-start items-start">
                 <p className="font-extrabold text-2xl">€ {price}</p>

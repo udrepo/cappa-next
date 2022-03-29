@@ -16,7 +16,7 @@ return <section className="md:flex justify-between lg:my-10">
     </div>
   <section className="md:w-4/6">
       <iframe width="100%" height={setHeight()} src={`https://www.youtube.com/embed/${videoId}?controls=0`}
-              title="YouTube video player" frameBorder="0"
+              title="YouTube video player" frameBorder="0" loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen></iframe>
   </section>
