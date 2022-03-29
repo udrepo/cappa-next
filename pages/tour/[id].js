@@ -35,8 +35,9 @@ export default function TourPage() {
     const {id} = router.query;
 
     const lg = router.locale.toString();
-
     const obj = {...tours[lg].tours.find(e => e.id === id)}
+    const toursBlock = tours[lg].tours.filter(e => e.id !== id);
+
     return <main className="mb-10 md:mx-20">
 
         <hr className="hidden lg:block -mx-20"/>
@@ -49,8 +50,8 @@ export default function TourPage() {
                 <div className="lg:order-1 ">
                     <h1 className="text-dark-blue text-2xl font-extrabold lg:text-4xl mt-4 lg:mt-6">
                         <div className="hidden lg:block lg:flex items-center gap-1 my-3 text-sm">
-                            <p className="bg-main-text w-fit p-1 rounded-md text-white font-bold">Most popular</p>
-                            <p className="bg-yellow-300 w-fit p-1 rounded-md text-white font-bold">High Rated</p>
+                            <p className="bg-main-text w-fit p-1 rounded-md text-white font-bold popular">{obj.popular}</p>
+                            <p className="bg-yellow-300 w-fit p-1 rounded-md text-white font-bold rated">{obj.rated}</p>
                         </div>
                         {obj.title}
                     </h1>
@@ -63,7 +64,7 @@ export default function TourPage() {
                                 <AiFillStar size={20}/>
                                 <AiFillStar size={20}/>
                             </div>
-                            <p className="pl-1">4.9</p>
+                            <p className="pl-1">{obj.rating}</p>
                         </div>
                         <div className="flex flex-col text-main-text justify-start items-end lg:hidden">
                             <p className="font-extrabold text-xl">$ 130</p>
@@ -149,14 +150,14 @@ export default function TourPage() {
                 </div>
                 <div className="flex gap-2 items-center">
                     <p>{t('tour:payWith')} </p>
-                    <Image src="/assets/pay/visa.png" height={30} width={30}/>
-                    <Image src="/assets/pay/master-card.png" height={30} width={30}/>
-                    <Image src="/assets/pay/american-express.png" height={30} width={30}/>
-                    <Image src="/assets/pay/union.png" height={30} width={30}/>
+                    <Image src="/assets/pay/visa.png" height={30} width={30} alt="cappadocia balloon flight"/>
+                    <Image src="/assets/pay/master-card.png" height={30} width={30} alt="cappadocia balloon flight"/>
+                    <Image src="/assets/pay/american-express.png" height={30} width={30} alt="cappadocia balloon flight"/>
+                    <Image src="/assets/pay/union.png" height={30} width={30} alt="cappadocia balloon flight"/>
                 </div>
             </div>
             <hr/>
-            <TourBlocks title={t('tour:otherTours')} tours={tours[lg].tours} pp={t('tour:pp')}/>
+            <TourBlocks title={t('tour:otherTours')} tours={toursBlock} pp={t('tour:pp')}/>
             <hr/>
             <Reviews reviews={obj.reviews} reviewsAmount={obj.reviewsAmount}/>
         </div>

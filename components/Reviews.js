@@ -5,8 +5,8 @@ import useTranslation from "next-translate/useTranslation";
 export default function Reviews({reviews, reviewsAmount}) {
     let {t} = useTranslation();
     return <section className="grid lg:grid-cols-4 gap-10 my-4 ">
-        <div className="flex flex-col justify-center items-center gap-2">
-            <p className="text-2xl font-bold">{t('tour:reviewText')}</p>
+        <div className="flex flex-col items-center gap-2">
+            <p className="text-2xl font-bold py-4">{t('tour:reviewText')}</p>
             <div className="flex text-yellow-400">
                 <AiFillStar size={48}/>
                 <AiFillStar size={48}/>

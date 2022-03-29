@@ -1,10 +1,11 @@
 import '../styles/globals.css'
 import Layout from "../components/Layout";
+import useTranslation from "next-translate/useTranslation";
 
 
 function MyApp({ Component, pageProps }) {
-
-  return <Layout>
+  let {t} = useTranslation();
+  return <Layout title={t('common:title')}>
     <Component {...pageProps}/>
   </Layout>
 }
