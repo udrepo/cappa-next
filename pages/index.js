@@ -7,12 +7,18 @@ import useTranslation from "next-translate/useTranslation";
 import CappaView from "../components/CappaViews";
 import {useRouter} from "next/router";
 import {tours} from "../data/tours";
+import {visitorData} from "../helper/vistorData";
+import {useEffect} from "react";
 
 export default function Home() {
+
     let {t} = useTranslation();
     const router = useRouter();
-    const {id} = router.query;
     const lg = router.locale.toString();
+
+    useEffect(()=>{
+        visitorData({page: router.asPath, lg: router.locale})
+    }, []);
 
     return (
         <>

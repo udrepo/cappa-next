@@ -11,6 +11,8 @@ import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 import {useRouter} from "next/router";
 import {tours} from "../../data/tours";
+import {useEffect} from "react";
+import {visitorData} from "../../helper/vistorData";
 
 export const getStaticPaths = async ({locales}) => {
     let paths = locales.map(locale => {
@@ -33,6 +35,10 @@ export default function TourPage() {
     let {t} = useTranslation();
     const router = useRouter();
     const {id} = router.query;
+
+    useEffect(()=>{
+        visitorData({page: router.asPath, lg: router.locale})
+    }, [router.asPath]);
 
     const lg = router.locale.toString();
     const obj = {...tours[lg].tours.find(e => e.id === id)}
@@ -67,7 +73,7 @@ export default function TourPage() {
                             <p className="pl-1">{obj.rating}</p>
                         </div>
                         <div className="flex flex-col text-main-text justify-start items-end lg:hidden">
-                            <p className="font-extrabold text-xl">$ 130</p>
+                            <p className="font-extrabold text-xl">€ {obj.price}</p>
                             <p className="">{t('tour:pp')}</p>
                         </div>
                     </div>
@@ -161,6 +167,6 @@ export default function TourPage() {
             <hr/>
             <Reviews reviews={obj.reviews} reviewsAmount={obj.reviewsAmount}/>
         </div>
-        <BookNowButton/>
+        <BookNowButton bookNow={t('tour:bookNow')}/>
     </main>
 }
