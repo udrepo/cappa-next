@@ -1,6 +1,5 @@
 export const visitorData = (pageInfo)=>{
     let where = 'no data';
-    console.log(pageInfo);
     fetch('https://api.ipfind.com/me?&auth=9f9a51cf-3a41-40c7-98b7-34b8d00c3e20')
         .then(res => res.json())
         .then(response => {

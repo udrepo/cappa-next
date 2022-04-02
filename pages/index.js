@@ -16,6 +16,7 @@ export default function Home() {
     const router = useRouter();
     const lg = router.locale.toString();
 
+    //TODO
     useEffect(()=>{
         visitorData({page: router.asPath, lg: router.locale})
     }, []);

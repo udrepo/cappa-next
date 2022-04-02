@@ -36,6 +36,7 @@ export default function TourPage() {
     const router = useRouter();
     const {id} = router.query;
 
+    //TODO
     useEffect(()=>{
         visitorData({page: router.asPath, lg: router.locale})
     }, [router.asPath]);
@@ -164,8 +165,8 @@ export default function TourPage() {
             </div>
             <hr/>
             <TourBlocks title={t('tour:otherTours')} tours={toursBlock} pp={t('tour:pp')}/>
-            <hr/>
-            <Reviews reviews={obj.reviews} reviewsAmount={obj.reviewsAmount}/>
+            {/*<hr/>*/}
+            {/*<Reviews reviews={obj.reviews} reviewsAmount={obj.reviewsAmount}/>*/}
         </div>
         <BookNowButton bookNow={t('tour:bookNow')}/>
     </main>
