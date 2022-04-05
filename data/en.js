@@ -12,7 +12,7 @@ export const en = {
                         "on a hot air balloon flight over Cappadocia. Look down on the impressive" +
                         " valleys and plains at sunrise, and marvel at the clusters of cone-shaped " +
                         "rocks below you.",
-                    "price" : 169,
+                    "price" : 159,
                     "images": [
                         {url: '/assets/main/16.jpg'},
                         {url: '/assets/main/17.jpg'},
@@ -96,7 +96,7 @@ export const en = {
                         "Enjoy an all-inclusive tour with a cave hotel stay, flights, " +
                         "airport transfers, skip-the-line tickets & lunch. Fly over Cappadocia valley" +
                         "in hot air balloon",
-                    "price" : 519,
+                    "price" : 499,
                     "images": [
                         {url: '/assets/cappa/32.jpg'},
                         {url: '/assets/cappa/31.jpg'},
@@ -234,7 +234,7 @@ export const en = {
                         "on a hot air balloon flight over Cappadocia. Look down on the impressive" +
                         " valleys and plains at sunrise, and marvel at the clusters of cone-shaped " +
                         "rocks below you.",
-                    "price" : 179,
+                    "price" : 169,
                     "images": [
                         {url: '/assets/main/17.jpg'},
                         {url: '/assets/balloons/23.jpg'},
@@ -318,7 +318,7 @@ export const en = {
                         "on a hot air balloon flight over Cappadocia. Look down on the impressive" +
                         " valleys and plains at sunrise, and marvel at the clusters of cone-shaped " +
                         "rocks below you.",
-                    "price" : 219,
+                    "price" : 209,
                     "images": [
                         {url: '/assets/main/17.jpg'},
                         {url: '/assets/main/16.jpg'},
