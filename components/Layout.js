@@ -3,7 +3,7 @@ import Footer from "./Footer";
 import Head from "next/head";
 
 export default function Layout({children, title, descContent, keywords}) {
-    return <>
+    return <div>
         <Head>
             <title>{title}</title>
             <meta
@@ -25,5 +25,5 @@ export default function Layout({children, title, descContent, keywords}) {
         <NavBar/>
         <main>{children}</main>
         <Footer/>
-    </>
+    </div>
 }
