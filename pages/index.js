@@ -9,6 +9,7 @@ import {useRouter} from "next/router";
 import {tours} from "../data/tours";
 import {visitorData} from "../helper/vistorData";
 import {useEffect} from "react";
+import OpenChat from "../components/OpenChat";
 
 export default function Home() {
 
@@ -38,6 +39,7 @@ export default function Home() {
                     videoId="NLmYGHYtGko"
                     desc={t('common:desc')}/>
             </section>
+            <OpenChat openChat={t('common:openChat')}/>
         </>
     )
 }

@@ -29,7 +29,7 @@ export const en = {
                         "durationText": "at least 1 hour",
                     },
                     "highlights": [
-                        "Fly in the basket up to 16 people",
+                        "Fly in the basket up to 28 people",
                         "Watch the sunrise over the fairy chimney rock formations of Cappadocia",
                         "Amazing view",
                         "Get unforgettable experience",
@@ -251,7 +251,7 @@ export const en = {
                         "durationText": "at least 1 hour",
                     },
                     "highlights": [
-                        "Fly in the basket up to 16 people",
+                        "Fly in the basket up to 20 people",
                         "Watch the sunrise over the fairy chimney rock formations of Cappadocia",
                         "Amazing view",
                         "Get unforgettable experience",

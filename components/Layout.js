@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import Head from "next/head";
+import OpenChat from "./OpenChat";
 
 export default function Layout({children, title, descContent, keywords}) {
     return <div>
@@ -24,6 +25,7 @@ export default function Layout({children, title, descContent, keywords}) {
         </Head>
         <NavBar/>
         <main>{children}</main>
+
         <Footer/>
     </div>
 }

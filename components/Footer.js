@@ -27,8 +27,8 @@ export default function Footer() {
             <ul>
                 <li><a href="https://wa.me/77052743248/">{t('common:bookNow')}</a></li>
                 <li><a href="https://wa.me/77052743248/">{t('common:help')}</a></li>
-                <li><a href="">{t('common:privacy')}</a></li>
-                <li className="mb-2"><a href="">{t('common:agreement')}</a></li>
+                {/*<li><a href="">{t('common:privacy')}</a></li>*/}
+                {/*<li className="mb-2"><a href="">{t('common:agreement')}</a></li>*/}
                 <hr/>
                 <li className="mt-2">{t('common:contacts')}
                     <br/>+7 705 274 3248 (WhatsApp)
