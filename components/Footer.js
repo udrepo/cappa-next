@@ -33,7 +33,7 @@ export default function Footer() {
                 <li className="mt-2">{t('common:contacts')}
                     <br/>+7 705 274 3248 (WhatsApp)
                     <br/>+7 778 183 0799
-                    <br/>Email: opencappadocia@gmail.com
+                    <br/>Email: <a href="mailto:opencappadocia@gmail.com">opencappadocia@gmail.com</a>
                 </li>
             </ul>
         </div>

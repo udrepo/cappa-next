@@ -4,7 +4,7 @@ import useTranslation from "next-translate/useTranslation";
 import BookForm from "./BookForm";
 import {useState} from "react";
 
-export default function BookBlock({price, title}) {
+export default function BookBlock({price, title, lg}) {
     const [showBF, setShowBF] = useState(false);
     let {t} = useTranslation();
     return <div className="hidden lg:block absolute top-0 right-0 px-4 pt-10
@@ -15,14 +15,10 @@ export default function BookBlock({price, title}) {
                 <p className="">{t('tour:pp')}</p>
             </div>
             <div className="flex flex-col w-3/5 gap-2">
-                <button className="px-1 py-2 bg-whatsapp h-fit rounded-3xl text-white font-bold"
-                // onClick={()=>{setShowBF(true)}}
+                <button className="px-1 py-2 bg-dark-blue hover:bg-hover-blue h-fit rounded-3xl text-white font-bold"
+                onClick={()=>{setShowBF(true)}}
                 >
-                    <a href="https://wa.me/77052743248/">
-                        {t('tour:bookInWA')}</a>
-                </button>
-                <button className="px-1 py-2 bg-instagram h-fit rounded-3xl text-white font-bold ">
-                    <a href="https://www.instagram.com/open.cappadocia/"> {t('tour:bookInIG')}</a>
+                        {t('tour:bookNow')}
                 </button>
             </div>
         </div>
@@ -36,7 +32,8 @@ export default function BookBlock({price, title}) {
             <Image src="/assets/pay/master-card.png" height={30} width={30}/>
             <Image src="/assets/pay/american-express.png" height={30} width={30}/>
             <Image src="/assets/pay/union.png" height={30} width={30}/>
+            <Image src="/assets/pay/mir.png" height={30} width={30}/>
         </div>
-        {showBF && <BookForm/>}
+        {showBF && <BookForm price={price} lg={lg}/>}
     </div>
 }
