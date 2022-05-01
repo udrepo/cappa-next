@@ -1,5 +1,5 @@
 import DatePicker from "react-datepicker";
-import {Controller, useForm} from "react-hook-form";
+import {useForm} from "react-hook-form";
 import "react-datepicker/dist/react-datepicker.css";
 import {useState} from "react";
 import ValidationMsg from "./ValidationMsg";
@@ -13,20 +13,22 @@ export default function BookForm({price, lg}) {
     nextDay.setDate(nextDay.getDate() + 1);
     const {control, register, handleSubmit, watch, formState: {errors}} = useForm();
     const onSubmit = data => {
-        console.log({...data, additional, total, date, lg,
+        console.log({
+            ...data, additional, total, date, lg,
             currency: "EUR",
             payID: generateId(12),
             amount: "something"
         });
-        postData({...data, additional, total, date, lg,
+        postData({
+            ...data, additional, total, date, lg,
             currency: "EUR",
             payID: generateId(12),
             amount: "Tour in Cappadocia"
         }, 'bookings')
             .then(data => {
-            console.log("from then");
-            window.location.href = data.redirectLink.info.response.pg_redirect_url[0];
-        });
+                console.log("from then");
+                window.location.href = data.redirectLink.info.response.pg_redirect_url[0];
+            });
     }
 
     const [startDate, setStartDate] = useState(nextDay);
@@ -38,13 +40,16 @@ export default function BookForm({price, lg}) {
         <form className="flex flex-col gap-0.5 mt-2" onSubmit={handleSubmit(onSubmit)}>
             <label>Pick a date:</label>
             <div className="border-2 border-dark-blue w-fit flex items-center">
-                        <DatePicker
-                            placeholderText='Select date'
-                            onChange={(date) => setDate(date)}
-                            selected={startDate}
-                            minDate={startDate}
-                            closeOnScroll={true}
-                        />
+                <DatePicker
+                    placeholderText='Select date'
+                    onChange={(date) => {
+                        setStartDate(date);
+                        setDate(date)
+                    }}
+                    selected={startDate}
+                    minDate={startDate}
+                    closeOnScroll={true}
+                />
             </div>
             <label>Your name:</label>
             <input {...register("name", {required: true})}
